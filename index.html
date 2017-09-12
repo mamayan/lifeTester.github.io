@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0">
+    <link rel="stylesheet" href="index.css">
+    <!--<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+</head>
+<body>
+<div class="page-lifeTester">
+    <div class="page-bg">
+        <img class="bg-blue" src="images/icon_bg-dark.png" alt="no-pic">
+        <img class="bg-red" src="images/icon_bg-light.png" alt="no-pic">
+    </div>
+    <div class="page-body">
+        <div class="page-body-bg"></div>
+        <div class="antenna-whole">
+            <img class="antenna" src="images/icon_antenna.png" alt="no-pic">
+            <img class="ripple1" src="images/icon_line1.png" alt="no-pic">
+            <img class="ripple2" src="images/icon_line2.png" alt="no-pic">
+            <img class="ripple3" src="images/icon_line3.png" alt="no-pic">
+        </div>
+        <img class="page-body-eyes eye-left" src="images/icon_eyes.png" alt="no-pic">
+        <img class="page-body-eyes eye-right" src="images/icon_eyes.png" alt="no-pic">
+        <div class="mask-box"><img class="text-mask" src="images/icon_mask.png" alt="no-pic"></div>
+        <img class="page-body-btn"  src="images/btn_start.png" alt="no-pic">
+    </div>
+    <a class="bgm-controls" onclick="playPause()"><img id="page-bgm-on" src="images/btn_on.png" alt="no-pic"></a>
+    <!--<a class="bgm-controls2"><img class="page-bgm-off" src="images/btn_off.png" alt="no-pic"></a>-->
+    <audio id="bgm" src="images/gf.mp3" autoplay="autoplay" loop="loop"></audio>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

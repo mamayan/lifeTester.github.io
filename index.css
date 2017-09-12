@@ -1,0 +1,228 @@
+
+/*layout style*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.page-lifeTester{
+    position: relative;
+    width: 3.75rem;
+    height: 6.67rem;
+}
+.page-bg{
+    position: absolute;
+    top: 0;
+    height: 6.67rem;
+    width: 3.75rem;
+    z-index: -10;
+}
+.bg-blue{
+    position: absolute;
+    /*display: none;*/
+    width: 3.75rem;
+    height: 6.67rem;
+    /*animation: bg-blue-animation 1s infinite;*/
+    z-index: -11;
+}
+.bg-red{
+    position: absolute;
+    width: 3.75rem;
+    height: 6.67rem;
+    animation: bg-red-animation 1.8s infinite;
+    animation-delay: 0.5s;
+    z-index: -12;
+}
+.page-body{
+    position: relative;
+    top: 0;
+    width: 3.75rem;
+    height: 6.67rem;
+}
+.page-body .page-body-bg{
+    position: absolute;
+    background-image: url(images/bg-whole.png);
+    background-size: 100%;
+    width: 3.75rem;
+    height: 6.67rem;
+    z-index: -2;
+}
+.antenna-whole{
+    position: absolute;
+    width: 3.75rem;
+    height: 3rem;
+}
+.antenna{
+    position: absolute;
+    display: block;
+    width: 0.35rem;
+    height: 0.67rem;
+    top: 0.04rem;
+    left: 1.48rem;
+    z-index: -3;
+    animation: antenna-animation 1.8s infinite;
+    transform-origin: 100% 100%;
+}
+.ripple1{
+    position: absolute;
+    top: 0.06rem;
+    left: 35%;
+    width: 0.75rem;
+    height: 0.245rem;
+    animation: ripple1-animation 1.8s infinite;
+}
+.ripple2{
+    position: absolute;
+    top: 0.07rem;
+    left: 31%;
+    width: 1.045rem;
+    height: 0.175rem;
+    animation: ripple2-animation 1.8s infinite;
+}
+.ripple3{
+    position: absolute;
+    top: 0.09rem;
+    left: 29%;
+    width: 1.23rem;
+    height: 0.125rem;
+    animation: ripple3-animation 1.8s infinite;
+}
+.page-body-eyes{
+    position: absolute;
+    display: block;
+    width: 0.17rem;
+    height: 0.17rem;
+    animation: eyes-animation 1.8s infinite;
+    transform-origin: 70% -20%;
+}
+.eye-left{
+    top: 0.54rem;
+    left: 0.5rem;
+}
+.eye-right{
+    top: 0.50rem;
+    right: 0.68rem;
+}
+.mask-box{
+    position: absolute;
+    width: 3.2rem;
+    height: 2.04rem;
+    top: 2.1rem;
+    left: 50%;
+    border-radius: 0.2rem;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.text-mask{
+    position: absolute;
+    width: 3.37rem;
+    height: 4.395rem;
+    top: -1rem;
+    left: 50%;
+    margin-left: -1.685rem;
+    z-index: 2;
+    animation: mask-animation 1.8s infinite;
+    animation-delay: 0.5s;
+}
+.page-body-btn{
+    position: absolute;
+    display: block;
+    width: 2.07rem;
+    height: 0.82rem;
+    top: 4.72rem;
+    left: 50%;
+    margin-left: -1.035rem;
+    animation: btn-animation 1.8s infinite;
+    animation-delay: 0.5s;
+}
+.bgm-controls,#page-bgm-on{
+    display: block;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.16rem;
+    width: 0.35rem;
+    height: 0.35rem;
+}
+#page-bgm-on{
+    top: 0;
+    right: 0;
+}
+/*.bgm-controls2,.page-bgm-off{*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*top: 0.1rem;*/
+    /*right: 0.16rem;*/
+    /*width: 0.35rem;*/
+    /*height: 0.35rem;*/
+/*}*/
+/*.page-bgm-off{*/
+    /*top: 0;*/
+    /*right: 0;*/
+/*}*/
+/*animation section*/
+@keyframes btn-animation
+{
+    0% {transform: none;}
+    8% {transform: scale(1.1);}
+    16% {transform: scale(1);}
+    24% {transform: scale(1.1);}
+    32% {transform: scale(1);}
+    40% {transform: scale(1.16);}
+    48% {transform: scale(1);}
+    56% {transform: scale(1.16);}
+    64% {transform: scale(1);}
+    72% {transform: scale(1.16);}
+    80% {transform: scale(1);}
+    100% {transform: scale(1);}
+}
+@keyframes antenna-animation
+{
+    0% {transform: none;}
+    30% {transform: none;}
+    60% {transform: rotate(-30deg);}
+    70% {transform: none;}
+    100% {transform: none;}
+}
+@keyframes mask-animation {
+    0% {transform: none;}
+    30% {transform: translate(2.4rem,1.2rem);}
+    /*60% {transform: none;}*/
+    50% {transform: translate(-1.2rem,-0.6rem);}
+    60% {transform: none;}
+    100% {transform: none;}
+}
+@keyframes eyes-animation{
+    0% {transform: none;}
+    30% {transform: rotate(-90deg);}
+    50% {transform: rotate(-90deg);}
+    80% {transform: rotate(40deg);}
+    100% {transform: rotate(40deg);}
+}
+@keyframes bg-red-animation {
+    0% {z-index: -12}
+    5% {z-index: -11;}
+    10% {z-index: -12;}
+    15% {z-index: -11;}
+    20% {z-index: -12;}
+    100% {z-index: -12;}
+}
+@keyframes ripple1-animation {
+    0% {z-index: 3;}
+    40% {z-index: 3;}
+    60% {z-index: -20;}
+    62% {z-index: 3;}
+    100% {z-index: 3;}
+}
+@keyframes ripple2-animation {
+    0% {z-index: 4;}
+    40% {z-index: 4;}
+    60% {z-index: -21;}
+    78% {z-index: 4;}
+    100% {z-index: 4;}
+}
+@keyframes ripple3-animation {
+    0% {z-index: 5;}
+    40% {z-index: 5;}
+    60% {z-index: -22;}
+    94% {z-index: 5;}
+    100% {z-index: 5;}
+}
